@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr {
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    border-top: 2px solid #282828;   
+    border-bottom: 2px solid #282828;
+    padding: 8px;
+    text-align: left;
+}
+
+tbody>tr:nth-child(even):hover {
+    background-color: #ddd;
+}
+tbody>tr:nth-child(odd):hover {
+    background-color: #dddddd;
+}
