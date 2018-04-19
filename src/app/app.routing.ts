@@ -1,10 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes,RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AboutUserComponent } from './about/about-user.component';
+
 //it checks in order if there's path to route to , so if we'll place path '**' at the beginning of the Routes[] ,every single page will returns 404(the order matteres!)
 //Handle Redirects: { path: '', redirectTo:'about',pathMatch:'full' },
 
@@ -13,8 +12,10 @@ import { AboutUserComponent } from './about/about-user.component';
                 searching for matching child routes where the rest of the URL matches.**/
 const appRoutes: Routes = [
     { path: '', component:HomeComponent },
-    { path: 'about', component:AboutComponent },
-    { path: 'about/:username', component:AboutUserComponent },
+    {
+        path: 'about',
+        loadChildren: 'app/about/about.module#AboutModule'
+    },
     { path: 'contact', component:ContactComponent },
     { path: '**',component:NotFoundComponent }
 ];
