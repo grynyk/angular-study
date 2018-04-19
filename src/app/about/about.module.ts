@@ -5,6 +5,8 @@ import { AboutUserComponent } from './about-user.component';
 import { UserService } from '../shared/services/user.service';
 import { aboutRouting } from './about.routing'
 import { AboutSectionComponent } from './about-section.component';
+import { AboutUsersResolve } from './about-resolve.service';
+
 // ONE BrowserModule in a top level module , child module(like this one) should use CommonModule
 
 @NgModule({
@@ -18,7 +20,8 @@ import { AboutSectionComponent } from './about-section.component';
     AboutSectionComponent
   ],
   providers:[
-    UserService
+    UserService,
+    AboutUsersResolve
   ]
 })
 export class AboutModule { }
