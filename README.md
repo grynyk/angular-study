@@ -1,4 +1,5 @@
-<h2># angular-study<h2>
+<h3># ANGULAR - study<h3>
+<hr>
 <h4>list of branches:<h4>
 <ul>
   <li>1. http-json  - http service to get and display json data</li>
