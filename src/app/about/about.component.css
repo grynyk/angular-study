@@ -1,0 +1,11 @@
+.profile-card{
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    padding:30px;
+    text-align:center;
+}
+
+.profile-card img{
+    max-width:50%;
+    margin:15px auto;
+}

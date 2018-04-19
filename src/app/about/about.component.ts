@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../shared/models/user';
+import { UserService } from '../shared/services/user.service'
+
 
 @Component({
   selector: 'about-page',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  users: User[];
+  constructor(private service: UserService) { 
 
-  constructor() { }
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.service.getUsers().then(users => this.users = users);
+  }
+
+  
 }

@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+import { AboutUserComponent } from './about/about-user.component';
+import { UserService } from './shared/services/user.service';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     ContactComponent,
     AboutComponent,
+    AboutUserComponent,
     NotFoundComponent
   ],
   imports: [
@@ -22,7 +24,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     appRouting
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
