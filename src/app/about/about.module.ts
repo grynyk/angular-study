@@ -6,6 +6,7 @@ import { UserService } from '../shared/services/user.service';
 import { aboutRouting } from './about.routing'
 import { AboutSectionComponent } from './about-section.component';
 import { AboutUsersResolve } from './about-resolve.service';
+import { AboutUserResolve } from './about-user-resolve.service';
 
 // ONE BrowserModule in a top level module , child module(like this one) should use CommonModule
 
@@ -21,7 +22,8 @@ import { AboutUsersResolve } from './about-resolve.service';
   ],
   providers:[
     UserService,
-    AboutUsersResolve
+    AboutUsersResolve,
+    AboutUserResolve
   ]
 })
 export class AboutModule { }

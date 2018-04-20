@@ -15,16 +15,17 @@ import { UserService } from '../shared/services/user.service'
   export class AboutUserComponent implements OnInit {
       user:User;
     constructor(private route: ActivatedRoute,
-        private service: UserService,
         private router : Router
     ){
     }
     ngOnInit(){
-       let username =  this.route.snapshot.params['username']; //usage of the snapshot way of ActivatedRoute to grab the username route parameter
-
-        this.service.getUser(username).then(user=>{
-        this.user=user;
-    });
+        //grab the current username
+        //  let username =  this.route.snapshot.params['username']; //usage of the snapshot way of ActivatedRoute to grab the username route parameter
+        // this.service.getUser(username).then(user=>{
+        // this.user=user});
+        this.route.data.forEach((data:{user:User})=>{
+            this.user = data.user
+            });
     }
 
     goBack(){
