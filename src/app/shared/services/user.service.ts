@@ -18,6 +18,24 @@ const usersPromise: Promise<User[]> = Promise.resolve([
       name:'bluetie',
       username:'bluetie',
       avatar:'https://thumbs.dreamstime.com/b/user-sign-icon-person-symbol-human-avatar-old-rich-man-84519309.jpg'
+    },
+    {
+      id:4,
+      name:'sluchawka',
+      username:'helpdesk',
+      avatar:'http://quickstartaz.com/wp-content/uploads/2017/10/QSrep.png'
+    },
+    {
+      id:5,
+      name:'yellowhair',
+      username:'yellowhair',
+      avatar:'http://www.hexatar.com/gallery/thumb/151208_020651_fe104ea6634.png'
+    },
+    {
+      id:6,
+      name:'tallgace',
+      username:'tallgace',
+      avatar:'http://www.hexatar.com/gallery/thumb/151123_082230_m9143e227c9.png'
     }
   ]);
 

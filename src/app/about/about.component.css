@@ -6,6 +6,10 @@
 }
 
 .profile-card img{
-    max-width:50%;
+    height:250px;
+    width:250px;
     margin:15px auto;
+}
+.card-body{
+    border-style:solid;
 }

@@ -16,6 +16,12 @@ const appRoutes: Routes = [
         path: 'about',
         loadChildren: 'app/about/about.module#AboutModule'
     },
+    {
+        path: 'dashboard',
+        /*to load lazy page we need to write below line with path to destination module,remove main path from the  destination module routing
+        and remove destination module imports from the app.module to prevent it from autoloading*/
+        loadChildren: 'app/dashboard/dahsboard.module#DashboardModule'
+    },
     { path: 'contact', component:ContactComponent },
     { path: '**',component:NotFoundComponent }
 ];
