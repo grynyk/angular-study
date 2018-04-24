@@ -1,3 +1,9 @@
-# angular-study
-1.http-json - http service to get and display json data
-2.ng-routing - learning routing in angular applications
+<h2># ROUTING</h2>
+<ul>
+   <li>Route to different pages</li>
+   <li>Route with parameters</li>
+   <li>Child Routes/Routing</li>
+   <li>Lazy loading</li>
+   <li>Guards before activating</li>
+   <li>Guards before leaving</li>
+</ul>
