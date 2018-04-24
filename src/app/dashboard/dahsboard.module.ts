@@ -5,12 +5,13 @@ import { DashboardUserDetailsComponent } from './users/dashboard-user-details/da
 import { DashboardUsersHomeComponent } from './users/dashboard-users-home/dashboard-users-home.component';
 import { DashboardUsersComponent } from './users/dashboard-users/dashboard-users.component';
 import { dashboardRouting } from './dashboard.routing';
-import { UserService } from '../shared/services/user.service'
-
+import { UserService } from '../shared/services/user.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
     imports:[
         CommonModule,
-        dashboardRouting
+        dashboardRouting,
+        FormsModule
     ],
     declarations:[
         DashboardComponent, 
