@@ -1,0 +1,15 @@
+.profile-card{
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    padding:30px;
+    text-align:center;
+}
+
+.profile-card img{
+    height:250px;
+    width:250px;
+    margin:15px auto;
+}
+.card-body{
+    border-style:solid;
+}
