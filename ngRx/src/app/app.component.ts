@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cars, Car } from './models/car.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngrx';
+ public cars: Car[] = [];
+
+ onAdd(car: Car){
+   this.cars.push(car);
+ }
+
+ onDelete(car: Car){
+  this.cars = this.cars.filter(c=> c.id !== car.id);
+}
+
 }
