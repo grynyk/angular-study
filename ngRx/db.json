@@ -1,0 +1,32 @@
+{
+  "cars": [
+    {
+      "name": "Tesla ",
+      "date": "09.01.19",
+      "model": "model S",
+      "isSold": false,
+      "id": 1
+    },
+    {
+      "name": "BMW",
+      "date": "09.01.19",
+      "model": "i8",
+      "isSold": false,
+      "id": 2
+    },
+    {
+      "name": "Ford",
+      "date": "09.01.19",
+      "model": "Mustang 1980",
+      "isSold": false,
+      "id": 3
+    },
+    {
+      "name": "Volkswagen",
+      "date": "09.01.19",
+      "model": "Golf 7",
+      "isSold": false,
+      "id": 4
+    }
+  ]
+}
