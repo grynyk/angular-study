@@ -11,15 +11,18 @@ export class CarsEffects {
 
   constructor(private actions$: Actions, private service: CarsService) {}
 
-  @Effect() loadCars = this.actions$.pipe(ofType(CAR_ACTION.ADD_CAR), switchMap((action: AddCar) => {
-    return this.service.preloadCars()
-  }), mergeMap((cars: Car[]) => {
-    return [
-      {
-        type: CAR_ACTION.LOAD_CARS,
-        payload: cars
-      }
-    ]
-  }))
+  @Effect() loadCars = this.actions$.pipe(
+    ofType(CAR_ACTION.ADD_CAR),
+    switchMap((action: AddCar) => {
+        return this.service.preloadCars()
+        }),
+    mergeMap((cars: Car[]) => {
+        return [
+        {
+            type: CAR_ACTION.LOAD_CARS,
+            payload: cars
+        }
+        ]
+    }))
 
 }
