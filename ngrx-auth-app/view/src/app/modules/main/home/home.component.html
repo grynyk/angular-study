@@ -1,0 +1,25 @@
+<div class="jumbotron row justify-content-center">
+    <div *ngIf="isAuthenticated; then UserPage; else GuestPage;"></div>
+    <ng-template #UserPage>
+     <div class="col-sm-6">
+        <div class="row">
+            <h4>You logged in as <strong>{{user.email}}!</strong></h4>
+            <button class="btn btn-sm btn-danger ml-auto" (click)="logout()">Logout</button>
+        </div>
+        <div class="card" style="margin:15px">
+            <div class="card-body">
+              <h5 class="card-title">Current State</h5>
+              <ul>
+                <li><strong>isAuthenticated</strong> - {{isAuthenticated}}</li>
+                <li><strong>user.email</strong> - {{ user?.email || 'null'}}</li>
+                <li><strong>user.token</strong> - {{ user?.token || 'null'}}</li>
+              </ul>
+            </div>
+          </div>
+     </div>
+    </ng-template>
+    <ng-template #GuestPage>
+      <a [routerLink]="['/login']" class="btn btn-success">Login</a>
+      <a [routerLink]="['/signup']" class="btn btn-primary ml-5">Signup</a>
+    </ng-template>
+</div>
